@@ -2,7 +2,7 @@ import requests
 import unittest
 
 
-TOKEN = 'AQAAAAA1B4MGAADLW4dWv2R8Zkw_lr3BU2eC7Ow'
+TOKEN = ' '
 
 URL = 'https://cloud-api.yandex.net/v1/disk/resources'
 

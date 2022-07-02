@@ -1,5 +1,3 @@
-from unittest.mock import MagicMock
-
 documents = [
     {"type": "passport", "number": "2207 876234", "name": "Василий Гупкин"},
     {"type": "invoice", "number": "11-2", "name": "Геннадий Покемонов"},
@@ -24,7 +22,7 @@ def check_document_existance(user_doc_number):
 
 
 def get_doc_owner_name():
-    user_doc_number = MagicMock('Введите номер документа - ')
+    user_doc_number = input('Введите номер документа - ')
     print()
     doc_exist = check_document_existance(user_doc_number)
     if doc_exist:
@@ -67,7 +65,7 @@ def append_doc_to_shelf(doc_number, shelf_number):
 
 
 def delete_doc():
-    user_doc_number = MagicMock('Введите номер документа - ')
+    user_doc_number = input('Введите номер документа - ')
     doc_exist = check_document_existance(user_doc_number)
     if doc_exist:
         for current_document in documents:
@@ -109,10 +107,10 @@ def show_all_docs_info():
 
 
 def add_new_doc():
-    new_doc_number = MagicMock('Введите номер документа - ')
-    new_doc_type = MagicMock('Введите тип документа - ')
-    new_doc_owner_name = MagicMock('Введите имя владельца документа- ')
-    new_doc_shelf_number = MagicMock('Введите номер полки для хранения - ')
+    new_doc_number = input('Введите номер документа - ')
+    new_doc_type = input('Введите тип документа - ')
+    new_doc_owner_name = input('Введите имя владельца документа- ')
+    new_doc_shelf_number = input('Введите номер полки для хранения - ')
     new_doc = {
         "type": new_doc_type,
         "number": new_doc_number,
